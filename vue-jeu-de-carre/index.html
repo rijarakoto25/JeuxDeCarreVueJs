@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"> 
+  <title>Vue</title>
+  <script type="text/javascript" src="./node_modules/vue/dist/vue.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="app">
+        <button @click="newGame">
+          NOUVELLE PARTIE
+        </button>
+        <hr>
+          <h4>{{ score }}</h4>
+        <hr>
+        <div>
+          <span class="carre" @click="selectSquare('hautGauche')" :class="{ bleu: hautGauche }" class="carre"></span>
+          <span class="carre" @click="selectSquare('hautDroite')" :class="{ rouge: hautDroite }" class="carre"></span>
+        </div>
+        <div>
+          <span class="carre" @click="selectSquare('basGauche')" :class="{ vert: basGauche }" class="carre"></span>
+          <span class="carre" @click="selectSquare('basDroite')" :class="{ jaune: basDroite }" class="carre"></span>
+          
+        </div>
+        <hr>
+        <span>sequence : </span>
+        <pre>{{sequence}}</pre>
+    </div>
+    <script type="text/javascript" src="./index.js" ></script>
+</body>
+</html>
